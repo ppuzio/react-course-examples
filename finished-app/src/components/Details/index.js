@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { DetailsWrapper, CardHeader, BackArrow } from './Details.css';
 import { URL, cardByIdQuery } from '../../constants';
-import { Link } from 'react-router-dom';
+
 import { CardWrapper } from '../Card/Card.css';
 
 const Details = () => {
