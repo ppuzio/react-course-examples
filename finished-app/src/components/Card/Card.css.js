@@ -11,3 +11,15 @@ export const CardWrapper = styled.div`
     color: black;
   }
 `;
+
+export const Name = styled.p`
+  color: ${({ color }) => `rgb(${color})`};
+`;
+
+// // styling React.Elements
+// import { Link } from 'react-router-dom';
+
+// export const StyledLink = styled(Link)`
+//   text-decoration: none;
+//   color: black;
+// `;

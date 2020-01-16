@@ -27,6 +27,7 @@ const Deck = () => {
           pokemon =>
             pokemon && (
               <Card
+                pokeNumber={pokemon.nationalPokedexNumber}
                 key={pokemon.id}
                 id={pokemon.id}
                 name={pokemon.name}
