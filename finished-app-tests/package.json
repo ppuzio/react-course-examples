@@ -11,6 +11,9 @@
     "react-scripts": "3.3.0"
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^24.9.0",
     "react-router-dom": "^5.1.2",
     "styled-components": "^5.0.0"
   },
@@ -22,6 +25,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "setupFiles": ["./tests/test-bundler.js"]
   },
   "browserslist": {
     "production": [
