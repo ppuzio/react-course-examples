@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './components/Header';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CardList from './components/CardList';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Details from './components/Details';
+import Header from './components/Header';
 
 function App() {
   return (
     <Router>
-      <Header title="Pokedex" />
+      <Header />
       <Switch>
         <Route exact path="/">
           <CardList />

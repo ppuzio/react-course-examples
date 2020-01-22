@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { cardsQuery, URL } from '../../constants';
 import Card from '../Card';
-import { CardList } from './CardList.css';
-import { URL, cardsQuery } from '../../constants';
 import SearchBar from '../SearchBar';
+import { CardList } from './CardList.css';
 
 const Deck = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -23,17 +23,21 @@ const Deck = () => {
     <>
       <SearchBar returnValue={setSearchQuery} />
       <CardList>
-        {filteredPokemons.map(
-          pokemon =>
-            pokemon && (
-              <Card
-                pokeNumber={pokemon.nationalPokedexNumber}
-                key={pokemon.id}
-                id={pokemon.id}
-                name={pokemon.name}
-                imageUrl={pokemon.imageUrl}
-              />
-            ),
+        {filteredPokemons.length ? (
+          filteredPokemons.map(
+            pokemon =>
+              pokemon && (
+                <Card
+                  id={pokemon.id}
+                  imageUrl={pokemon.imageUrl}
+                  key={pokemon.id}
+                  name={pokemon.name}
+                  types={pokemon.types}
+                />
+              ),
+          )
+        ) : (
+          <h2>Loading...</h2>
         )}
       </CardList>
     </>
