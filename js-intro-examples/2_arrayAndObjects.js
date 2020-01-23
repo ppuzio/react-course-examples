@@ -9,8 +9,8 @@ var arr = [
   },
   [5],
 ];
-
 var index = 2;
+
 console.log(arr[0], arr[index]);
 
 // objects
