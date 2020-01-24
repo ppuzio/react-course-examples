@@ -11,3 +11,4 @@ can't be mutated! */
 
 const person = { name: 'Adam' };
 person.name = 'Steven';
+console.log(person);
