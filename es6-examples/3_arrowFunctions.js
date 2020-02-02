@@ -1,5 +1,5 @@
 // The old way of creating functions
-function addNumbersDeclaration(a, b) {
+function addNumbersStatement(a, b) {
   return a + b;
 }
 
