@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `"<h1 class=\\"sc-AykKC gzshXR\\">Pokedex</h1><input class=\\"sc-AykKG iZHRia\\"><div class=\\"sc-AykKF nlbLF\\"></div>"`;
+
+exports[`test 1`] = `
+Object {
+  "foo": 43,
+}
+`;

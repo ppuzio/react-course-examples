@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { CardWrapper, Name } from './Card.css';
+import { CardWrapper, Name } from "./Card.css";
 
 const returnRGB = pokeNumber => {
   let color;

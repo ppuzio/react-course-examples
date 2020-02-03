@@ -1,24 +1,18 @@
-import React from 'react';
-import Header from './index';
+import React from "react";
+import { shallow } from "enzyme";
+import Header from "./index";
 
-describe('<Header />', () => {
-  it('renders three <Foo /> components', () => {
+describe("<Header />", () => {
+  it("renders a h1", () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find(Foo)).to.have.lengthOf(3);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.name()).toBe("styled.h1");
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('renders an `.icon-star`', () => {
-    const wrapper = shallow(<Header />);
-    expect(wrapper.find('.icon-star')).to.have.lengthOf(1);
+  it("renders a title when passed such a prop", () => {
+    const wrapper = shallow(<Header title="Pokedeck" />);
+    expect(wrapper.text()).toEqual("Test");
+    expect(wrapper.html()).toMatchSnapshot();
   });
-
-  it('renders children when passed in', () => {
-    const wrapper = shallow((
-      <Header>
-        <div className="unique" />
-      </Header>
-    ));
-    expect(wrapper.contains(<div className="unique" />)).to.equal(true);
-  });
-
 });
