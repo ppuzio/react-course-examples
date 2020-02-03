@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders a h1 1`] = `"<h1 class=\\"sc-AykKC gzshXR\\"></h1>"`;
+
+exports[`<Header /> renders a title when passed such a prop 1`] = `"<h1 class=\\"sc-AykKC gzshXR\\">Pokedeck</h1>"`;

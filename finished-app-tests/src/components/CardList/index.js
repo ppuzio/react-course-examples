@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import Card from '../Card';
-import { CardList } from './CardList.css';
-import { URL, cardsQuery } from '../../constants';
-import SearchBar from '../SearchBar';
+import React, { useState, useEffect } from "react";
+import Card from "../Card";
+import { CardList } from "./CardList.css";
+import { URL, cardsQuery } from "../../constants";
+import SearchBar from "../SearchBar";
 
 const Deck = () => {
   const [pokemons, setPokemons] = useState([]);
   const [searchQuery, setSearchQuery] = useState([]);
 
   const filteredPokemons = pokemons.filter(pokemon =>
-    pokemon.name.toLowerCase().includes(searchQuery),
+    pokemon.name.toLowerCase().includes(searchQuery)
   );
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Deck = () => {
                 name={pokemon.name}
                 imageUrl={pokemon.imageUrl}
               />
-            ),
+            )
         )}
       </CardList>
     </>

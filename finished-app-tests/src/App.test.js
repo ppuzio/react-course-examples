@@ -1,9 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { mount } from "enzyme";
+import App from "./App";
 
-xtest('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders learn react link", () => {
+  const wrapper = mount(<App />);
+  console.log(wrapper);
+  expect(wrapper.html()).toMatchSnapshot();
+});
+
+test("test", () => {
+  const obj = { foo: 43 };
+  expect(obj).toMatchSnapshot();
 });
